@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 🌱 Zdrowa Szkoła (School Wellness Organisation)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interaktywny prototyp strony internetowej promującej zdrowy styl życia wśród uczniów.  
+Projekt oparty na **React.js**, stworzony jako część inicjatywy edukacyjno-zdrowotnej.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Funkcje
 
-### `npm start`
+- Nowoczesny interfejs w React
+- Responsywny układ (mobilny / desktop)
+- Sekcje:
+  - 🏫 Strona główna  
+  - 💚 O nas  
+  - 🏃‍♂️ Programy  
+  - ✉️ Kontakt  
+- Prosty system nawigacji i formularz kontaktowy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Technologie
 
-### `npm test`
+- [React.js](https://react.dev/)
+- [Node.js](https://nodejs.org/)
+- [NPM](https://www.npmjs.com/)
+- CSS3 (modularny)
+- HTML5
+- Git + GitHub (kontrola wersji)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Instalacja lokalna
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Upewnij się, że masz zainstalowane:
+- **Node.js** (>= 18)
+- **npm** (>= 9)
+- **git**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1️⃣ Sklonuj repozytorium
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/school-wellness-organisation/school-wellness-organisation.git
+cd school-wellness-organisation
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+instalacja zaleznosci
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+urochomienie strony/aplikacji
+npm run start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+aplikacja otworzy sie lokalnie na
+http://localhost:3000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+aplikacja bedzie aktywna na stronie:
+https://school-wellness-organization@teb-ostrow.pl
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+struktura projektu:
+frontend/
+├── public/              # Pliki statyczne (favicon, index.html)
+├── src/                 # Kod źródłowy React
+│   ├── App.js           # Główny komponent aplikacji
+│   ├── index.js         # Punkt wejścia React
+│   ├── index.css        # Globalne style
+│   └── components/      # Dodatkowe komponenty (jeśli są)
+├── package.json         # Zależności i skrypty npm
+└── README.md            # Ten plik 🙂
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Deployment (na serwerze lub kontenerze)
 
-### Analyzing the Bundle Size
+Jeśli chcesz zdeployować aplikację na serwerze:
+npm install -g serve
+serve -s build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
