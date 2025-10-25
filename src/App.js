@@ -44,7 +44,7 @@ function App() {
         }
     };
 
-    // Głosowanie lokalne (możesz później dodać fetch do backendu)
+    // Lokalna zmiana głosów
     const vote = (index, value) => {
         const newIdeas = [...ideas];
         newIdeas[index].votes += value;
