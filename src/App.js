@@ -1,15 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
     const [ideas, setIdeas] = useState([]);
     const [text, setText] = useState("");
 
-    const addIdea = () => {
+    const BACKEND_URL = "https://school-wellness-organization.teb-ostrow.pl:8000";
+
+    // Pobieranie pomysłów z backendu przy starcie
+    useEffect(() => {
+        const fetchIdeas = async () => {
+            try {
+                const res = await fetch(`${BACKEND_URL}/api/ideas/`);
+                if (!res.ok) throw new Error("Błąd pobierania pomysłów");
+                const data = await res.json();
+                setIdeas(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchIdeas();
+    }, []);
+
+    // Dodawanie pomysłu do backendu
+    const addIdea = async () => {
         if (text.trim() === "") return;
-        setIdeas([...ideas, { text, votes: 0 }]);
-        setText("");
+
+        try {
+            const response = await fetch(`${BACKEND_URL}/api/ideas/`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ text }),
+            });
+
+            if (!response.ok) throw new Error("Błąd przy dodawaniu pomysłu");
+            const newIdea = await response.json();
+            setIdeas([...ideas, newIdea]);
+            setText("");
+        } catch (error) {
+            console.error(error);
+        }
     };
 
+    // Głosowanie lokalne (możesz później dodać fetch do backendu)
     const vote = (index, value) => {
         const newIdeas = [...ideas];
         newIdeas[index].votes += value;
